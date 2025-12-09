@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiveHub - 音楽フェス・ライブ情報サイト</title>
+    <!-- ファビコンつける -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -34,6 +35,7 @@
             left: 0;
             right: 0;
             bottom: 0;
+            /* 画像で背景文字を表示しているため、レスポンシブ対応できていない */
             background: url('https://placehold.co/1920x600/667eea/ffffff?text=Music+Festival') center/cover;
             opacity: 0.2;
         }
@@ -135,6 +137,7 @@
 
 <body>
     <!-- ナビゲーションバー -->
+     <!-- ハンバーガーメニューが開かない -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
@@ -149,21 +152,23 @@
                         <a class="nav-link active" href="#">ホーム</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">イベント一覧</a>
+                        <a class="nav-link" href="music-festival-list.html">イベント一覧</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">アーティスト</a>
+                        <a class="nav-link" href="music-artist-list.html">アーティスト</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">チケット購入</a>
+                        <a class="nav-link" href="music-festival-ticket.html">チケット購入</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">マイチケット</a>
+                        <a class="nav-link" href="music-festival-myticket.html">マイチケット</a>
                     </li>
-                </ul>
-                <button class="btn btn-warning ms-3 fw-bold">
-                    <i class="bi bi-person-circle"></i> ログイン
-                </button>
+                </ul>        
+                <a href="music-login-page.html" class="btn btn-warning ms-3 fw-bold">
+
+                        <i class="bi bi-person-circle"></i> 
+                        ログイン
+                </a>
             </div>
         </div>
     </nav>
@@ -183,12 +188,15 @@
                     </div>
                 </div>
             </div>
+            <!-- buttonの統一 aタグにbootstrapのbtnクラスで作成-->
             <div class="mt-4">
                 <button class="btn btn-outline-light btn-lg me-2">
-                    <i class="bi bi-calendar-event"></i> イベントを探す
+                    <i class="bi bi-calendar-event"></i>
+                    <a href="music-festival-list.html">イベントを探す</a>
                 </button>
                 <button class="btn btn-light btn-lg">
-                    <i class="bi bi-ticket-perforated"></i> チケット購入
+                    <i class="bi bi-ticket-perforated"></i> 
+                    <a href="music-festival-ticket.html">チケット購入</a>
                 </button>
             </div>
         </div>
@@ -201,6 +209,7 @@
                 <h3 class="text-center mb-4 fw-bold">
                     <i class="bi bi-alarm"></i> 次回開催まで
                 </h3>
+                <!-- レスポンシブ対応できてない -->
                 <div class="row text-center">
                     <div class="col-3">
                         <div class="countdown-box">
@@ -240,15 +249,16 @@
                 <h2 class="fw-bold">
                     <i class="bi bi-calendar-check text-danger"></i> 開催予定イベント
                 </h2>
+                <!-- すべて見るbuttonの位置を修正 -->
                 <a href="#" class="btn btn-outline-primary">すべて見る <i class="bi bi-arrow-right"></i></a>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card event-card">
-                        <div class="position-relative">
+                    <div class="card event-card position:relative;">
+                        <div class="position-relative stretched-link" >
                             <img src="https://placehold.co/400x250/ff6b6b/ffffff?text=Summer+Fest" class="card-img-top"
-                                alt="Summer Festival">
+                            alt="Summer Festival">
                             <div class="event-date-badge">
                                 <div class="day">03</div>
                                 <div class="month">12月</div>
@@ -271,6 +281,7 @@
                                 <div class="text-end">
                                     <small class="text-muted">¥8,000〜</small>
                                 </div>
+                                <a href="music-festival-detail.html" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -287,6 +298,7 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <!-- 各ジャンルのページに遷移 -->
                             <span class="badge bg-dark genre-badge mb-2">ロック</span>
                             <span class="badge bg-secondary genre-badge mb-2">メタル</span>
                             <h5 class="card-title fw-bold">ROCK NIGHT JAPAN</h5>
@@ -444,6 +456,7 @@
                 <h2 class="fw-bold">
                     <i class="bi bi-star-fill text-warning"></i> 人気アーティスト
                 </h2>
+                <!-- button位置の修正 -->
                 <a href="#" class="btn btn-outline-primary">すべて見る <i class="bi bi-arrow-right"></i></a>
             </div>
 
@@ -555,6 +568,7 @@
                 <div class="col-6 col-md-3">
                     <a href="#" class="text-decoration-none">
                         <div class="card text-center h-100 border-danger">
+                            <!-- rockだけアイコン無い -->
                             <div class="card-body">
                                 <i class="bi bi-guitar display-4 text-danger"></i>
                                 <h5 class="mt-3">ロック</h5>
