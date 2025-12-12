@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+:root {
+    --primary-color: #8b5cf6;
+    --secondary-color: #ec4899;
+    --accent-color: #06b6d4;
+    --dark-bg: #18181b;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 100%);
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 50%, var(--secondary-color) 100%);
+    color: white;
+    padding: 80px 0 50px 0;
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    margin-top: 60px;
+}
