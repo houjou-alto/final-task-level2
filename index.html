@@ -172,16 +172,15 @@
                     </div>
                 </div>
             </div>
-            <!-- buttonの統一 aタグにbootstrapのbtnクラスで作成-->
             <div class="mt-4">
-                <button class="btn btn-outline-light btn-lg me-2">
+                <a href="music-festival-list.html" class="btn btn-light btn-lg me-2">
                     <i class="bi bi-calendar-event"></i>
-                    <a href="music-festival-list.html">イベントを探す</a>
-                </button>
-                <button class="btn btn-light btn-lg">
+                    イベントを探す
+                </a>
+                <a href="music-festival-ticket.html" class="btn btn-light btn-lg">
                     <i class="bi bi-ticket-perforated"></i>
-                    <a href="music-festival-ticket.html">チケット購入</a>
-                </button>
+                    チケット購入
+                </a>
             </div>
         </div>
     </div>
@@ -193,7 +192,6 @@
                 <h3 class="text-center mb-4 fw-bold">
                     <i class="bi bi-alarm"></i> 次回開催まで
                 </h3>
-                <!-- レスポンシブ対応できてない -->
                 <div class="row text-center">
                     <div class="col-3">
                         <div class="countdown-box">
@@ -233,9 +231,7 @@
                 <h2 class="fw-bold">
                     <i class="bi bi-calendar-check text-danger"></i> 開催予定イベント
                 </h2>
-                <!-- すべて見るbuttonの位置を修正 -->
-                <a href="music-festival-list.html" class="btn btn-outline-primary">すべて見る <i
-                        class="bi bi-arrow-right"></i></a>
+
             </div>
 
             <div class="row g-4">
@@ -432,6 +428,10 @@
                         </div>
                     </div>
                 </div>
+                <div class= "d-flex justify-content-end">
+                    <a href="music-festival-list.html" class="btn btn-outline-primary">すべて見る <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
             </div>
         </section>
 
@@ -441,16 +441,13 @@
                 <h2 class="fw-bold">
                     <i class="bi bi-star-fill text-warning"></i> 人気アーティスト
                 </h2>
-                <!-- button位置の修正 -->
-                <a href="music-artist-list.html" class="btn btn-outline-primary">すべて見る <i
-                        class="bi bi-arrow-right"></i></a>
             </div>
-
+            
             <div class="row g-4">
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/ff6b6b/ffffff?text=Artist+1" class="artist-img mb-3"
-                            alt="アーティスト1">
+                        alt="アーティスト1">
                         <h5 class="fw-bold mb-1">THE ROCKERS</h5>
                         <p class="text-muted small mb-2">ロックバンド</p>
                         <div class="d-flex justify-content-center gap-2">
@@ -458,11 +455,11 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/4ecdc4/ffffff?text=Artist+2" class="artist-img mb-3"
-                            alt="アーティスト2">
+                        alt="アーティスト2">
                         <h5 class="fw-bold mb-1">DJ WAVE</h5>
                         <p class="text-muted small mb-2">DJ / プロデューサー</p>
                         <div class="d-flex justify-content-center gap-2">
@@ -470,11 +467,11 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/ffe66d/333333?text=Artist+3" class="artist-img mb-3"
-                            alt="アーティスト3">
+                        alt="アーティスト3">
                         <h5 class="fw-bold mb-1">JAZZ QUINTET</h5>
                         <p class="text-muted small mb-2">ジャズバンド</p>
                         <div class="d-flex justify-content-center gap-2">
@@ -482,11 +479,11 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/10b981/ffffff?text=Artist+4" class="artist-img mb-3"
-                            alt="アーティスト4">
+                        alt="アーティスト4">
                         <h5 class="fw-bold mb-1">ACOUSTIC DUO</h5>
                         <p class="text-muted small mb-2">アコースティック</p>
                         <div class="d-flex justify-content-center gap-2">
@@ -494,23 +491,23 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/f59e0b/ffffff?text=Artist+5" class="artist-img mb-3"
                             alt="アーティスト5">
-                        <h5 class="fw-bold mb-1">MC FLOW</h5>
+                            <h5 class="fw-bold mb-1">MC FLOW</h5>
                         <p class="text-muted small mb-2">ラッパー</p>
                         <div class="d-flex justify-content-center gap-2">
                             <span class="badge" style="background-color: #f59e0b;">ヒップホップ</span>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/ec4899/ffffff?text=Artist+6" class="artist-img mb-3"
-                            alt="アーティスト6">
+                        alt="アーティスト6">
                         <h5 class="fw-bold mb-1">POP STARS</h5>
                         <p class="text-muted small mb-2">ポップグループ</p>
                         <div class="d-flex justify-content-center gap-2">
@@ -518,11 +515,11 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/8b5cf6/ffffff?text=Artist+7" class="artist-img mb-3"
-                            alt="アーティスト7">
+                        alt="アーティスト7">
                         <h5 class="fw-bold mb-1">METAL FORCE</h5>
                         <p class="text-muted small mb-2">メタルバンド</p>
                         <div class="d-flex justify-content-center gap-2">
@@ -530,11 +527,11 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
                         <img src="https://placehold.co/200x200/3b82f6/ffffff?text=Artist+8" class="artist-img mb-3"
-                            alt="アーティスト8">
+                        alt="アーティスト8">
                         <h5 class="fw-bold mb-1">SOUL SINGER</h5>
                         <p class="text-muted small mb-2">ソウルシンガー</p>
                         <div class="d-flex justify-content-center gap-2">
@@ -542,9 +539,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="d-flex justify-content-end">
+                    <a href="music-artist-list.html" class="btn btn-outline-primary">すべて見る <i
+                            class="bi bi-arrow-right"></i></a>
+        
+                </div>
             </div>
         </section>
-
+        
         <!-- ジャンル別検索 -->
         <section class="mb-5">
             <h2 class="fw-bold mb-4">
@@ -556,7 +558,7 @@
                         <div class="card text-center h-100 border-danger">
                             <!-- rockだけアイコン無い -->
                             <div class="card-body">
-                                <i class="bi bi-guitar display-4 text-danger"></i>
+                                <i class="bi bi-suit-heart-fill display-4 text-danger"></i>
                                 <h5 class="mt-3">ロック</h5>
                                 <small class="text-muted">45イベント</small>
                             </div>
