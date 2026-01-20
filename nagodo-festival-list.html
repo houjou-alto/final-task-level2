@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>イベント一覧 - LiveHub</title>
+    <title>イベント一覧 - バンテリンドームナゴヤ</title>
     <!-- ファビコンつける -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -18,6 +18,11 @@
             background: white;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .icon{
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
         }
 
         .event-list-card {
@@ -108,7 +113,7 @@
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-music-note-beamed"></i> LiveHub
+                <img class="icon" src="img/16648.png" alt="">  バンテリンドームナゴヤ
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -122,7 +127,7 @@
                         <a class="nav-link active" href="#">イベント一覧</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="music-artist-list.html">アーティスト</a>
+                        <a class="nav-link" href="music-artist-list.html">野球情報</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="music-festival-ticket.html">チケット購入</a>
@@ -142,11 +147,11 @@
     <div class="page-header">
         <div class="container">
             <h1 class="display-4 fw-bold mb-3">イベント一覧</h1>
-            <p class="lead">全国で開催される音楽イベントを探そう</p>
+            <p class="lead">ナゴヤで開催されるイベントを探そう</p>
             <div class="row mt-4">
                 <div class="col-md-8">
                     <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="イベント名、アーティスト名、会場名で検索...">
+                        <input type="text" class="form-control" placeholder="イベント名、出演者名で検索...">
                         <button class="btn btn-light fw-bold" type="button">
                             <i class="bi bi-search"></i> 検索
                         </button>
@@ -198,72 +203,19 @@
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="checkbox" id="genre1" checked>
                             <label class="form-check-label" for="genre1">
-                                ロック <span class="badge bg-secondary">45</span>
+                                スポーツ<span class="badge bg-secondary">45</span>
                             </label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="checkbox" id="genre2">
                             <label class="form-check-label" for="genre2">
-                                ポップ <span class="badge bg-secondary">38</span>
+                                音楽<span class="badge bg-secondary">38</span>
                             </label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="checkbox" id="genre3">
                             <label class="form-check-label" for="genre3">
-                                EDM <span class="badge bg-secondary">32</span>
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="genre4">
-                            <label class="form-check-label" for="genre4">
-                                ジャズ <span class="badge bg-secondary">28</span>
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="genre5">
-                            <label class="form-check-label" for="genre5">
-                                ヒップホップ <span class="badge bg-secondary">25</span>
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="genre6">
-                            <label class="form-check-label" for="genre6">
-                                アコースティック <span class="badge bg-secondary">20</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- 会場別 -->
-                    <div class="filter-section">
-                        <h6 class="fw-bold mb-3">会場エリア</h6>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue1">
-                            <label class="form-check-label" for="venue1">
-                                東京 <span class="badge bg-secondary">67</span>
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue2">
-                            <label class="form-check-label" for="venue2">
-                                大阪 <span class="badge bg-secondary">45</span>
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue3">
-                            <label class="form-check-label" for="venue3">
-                                愛知 <span class="badge bg-secondary">32</span>
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue4">
-                            <label class="form-check-label" for="venue4">
-                                福岡 <span class="badge bg-secondary">28</span>
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue5">
-                            <label class="form-check-label" for="venue5">
-                                北海道 <span class="badge bg-secondary">18</span>
+                                その他 <span class="badge bg-secondary">32</span>
                             </label>
                         </div>
                     </div>
@@ -347,15 +299,11 @@
                         <span class="badge genre-filter-badge active"
                             style="background-color: #e5e7eb; color: #1f2937;">すべて</span>
                         <span class="badge genre-filter-badge"
-                            style="background-color: #fee2e2; color: #991b1b;">ロック</span>
+                            style="background-color: #fee2e2; color: #991b1b;">スポーツ</span>
                         <span class="badge genre-filter-badge"
-                            style="background-color: #fef3c7; color: #92400e;">ポップ</span>
+                            style="background-color: #fef3c7; color: #92400e;">音楽</span>
                         <span class="badge genre-filter-badge"
-                            style="background-color: #e0e7ff; color: #3730a3;">EDM</span>
-                        <span class="badge genre-filter-badge"
-                            style="background-color: #dbeafe; color: #1e40af;">ジャズ</span>
-                        <span class="badge genre-filter-badge"
-                            style="background-color: #fce7f3; color: #9f1239;">ヒップホップ</span>
+                            style="background-color: #e0e7ff; color: #3730a3;">ドラゴンズ</span>
                     </div>
                 </div>
 
@@ -595,8 +543,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-music-note-beamed"></i> LiveHub</h5>
-                    <p class="text-light">音楽で繋がる、最高の体験をあなたに。</p>
+                    <h5 class="fw-bold mb-3">バンテリンドームナゴヤ</h5>
+                    <p class="text-light">ナゴヤを沸かす、興奮のランドマーク</p>
                 </div>
                 <div class="col-md-2 mb-3">
                     <h6 class="fw-bold mb-3">サイト情報</h6>
@@ -625,7 +573,7 @@
                 </div>
             </div>
             <hr class="border-light">
-            <p class="text-center text-light mb-0">&copy; 2024 LiveHub. All rights reserved.</p>
+            <p class="text-center text-light mb-0 fw-bold">  株式会社ナゴヤドーム</p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
