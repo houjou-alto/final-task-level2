@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイチケット - LiveHub</title>
+    <title>マイチケット - バンテリンドームナゴヤ</title>
+    <!-- ファビコンつける -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="icon" href="img/dome-icon.png">
+
     <style>
-        :root {
-            --primary-color: #8b5cf6;
-            --secondary-color: #ec4899;
-            --accent-color: #06b6d4;
-            --dark-bg: #18181b;
+        .icon {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
         }
-        
-        .navbar {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 100%);
-        }
-        
-        .page-header {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 50%, var(--secondary-color) 100%);
-            color: white;
-            padding: 80px 0 50px 0;
-            margin-bottom: 40px;
-        }
-        
+
         .stat-card {
             background: white;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
             cursor: pointer;
         }
-        
+
         .stat-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .stat-icon {
             width: 60px;
             height: 60px;
@@ -48,22 +41,22 @@
             font-size: 1.5rem;
             margin-bottom: 15px;
         }
-        
+
         .ticket-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             margin-bottom: 20px;
             border-left: 5px solid var(--primary-color);
         }
-        
+
         .ticket-header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 20px;
         }
-        
+
         .qr-code {
             width: 120px;
             height: 120px;
@@ -74,39 +67,34 @@
             justify-content: center;
             font-size: 3rem;
         }
-        
+
         .table-card {
             background: white;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
-        
+
         .status-badge {
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-weight: 600;
         }
-        
+
         .tab-btn.active {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
         }
-        
-        footer {
-            background-color: var(--dark-bg);
-            color: white;
-            margin-top: 60px;
-        }
     </style>
 </head>
+
 <body>
     <!-- ナビゲーションバー -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="bi bi-music-note-beamed"></i> LiveHub
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img class="icon" src="img/dome-icon.png" alt=""> バンテリンドームナゴヤ
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -114,16 +102,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ホーム</a>
+                        <a class="nav-link" href="index.html">ホーム</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">イベント一覧</a>
+                        <a class="nav-link" href="nagodo-festival-list.html">イベント一覧</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">アーティスト</a>
+                        <a class="nav-link" href="nagodo-baseball-list.html">野球情報</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">チケット購入</a>
+                        <a class="nav-link" href="nagodo-baseball-ticket.html">ドラゴンズ観戦チケット</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">マイチケット</a>
@@ -151,7 +139,8 @@
         <div class="row g-4 mb-5">
             <div class="col-md-3">
                 <div class="stat-card text-center">
-                    <div class="stat-icon mx-auto" style="background: rgba(139, 92, 246, 0.1); color: var(--primary-color);">
+                    <div class="stat-icon mx-auto"
+                        style="background: rgba(139, 92, 246, 0.1); color: var(--primary-color);">
                         <i class="bi bi-ticket-perforated-fill"></i>
                     </div>
                     <h3 class="fw-bold mb-1">3</h3>
@@ -169,7 +158,8 @@
             </div>
             <div class="col-md-3">
                 <div class="stat-card text-center">
-                    <div class="stat-icon mx-auto" style="background: rgba(236, 72, 153, 0.1); color: var(--secondary-color);">
+                    <div class="stat-icon mx-auto"
+                        style="background: rgba(236, 72, 153, 0.1); color: var(--secondary-color);">
                         <i class="bi bi-heart-fill"></i>
                     </div>
                     <h3 class="fw-bold mb-1">8</h3>
@@ -178,7 +168,8 @@
             </div>
             <div class="col-md-3">
                 <div class="stat-card text-center">
-                    <div class="stat-icon mx-auto" style="background: rgba(6, 182, 212, 0.1); color: var(--accent-color);">
+                    <div class="stat-icon mx-auto"
+                        style="background: rgba(6, 182, 212, 0.1); color: var(--accent-color);">
                         <i class="bi bi-star-fill"></i>
                     </div>
                     <h3 class="fw-bold mb-1">4.8</h3>
@@ -190,17 +181,20 @@
         <!-- タブナビゲーション -->
         <ul class="nav nav-pills mb-4" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link tab-btn active" id="upcoming-tab" data-bs-toggle="pill" data-bs-target="#upcoming" type="button" role="tab">
-                    <i class="bi bi-calendar-event"></i> 参加予定 (3)
+                <button class="nav-link tab-btn active" id="upcoming-tab" data-bs-toggle="pill"
+                    data-bs-target="#upcoming" type="button" role="tab">
+                    <i class="bi bi-calendar-event"></i> 参加予定 (2)
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link tab-btn" id="history-tab" data-bs-toggle="pill" data-bs-target="#history" type="button" role="tab">
+                <button class="nav-link tab-btn" id="history-tab" data-bs-toggle="pill" data-bs-target="#history"
+                    type="button" role="tab">
                     <i class="bi bi-clock-history"></i> 参加履歴 (12)
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link tab-btn" id="cancelled-tab" data-bs-toggle="pill" data-bs-target="#cancelled" type="button" role="tab">
+                <button class="nav-link tab-btn" id="cancelled-tab" data-bs-toggle="pill" data-bs-target="#cancelled"
+                    type="button" role="tab">
                     <i class="bi bi-x-circle"></i> キャンセル済み (2)
                 </button>
             </li>
@@ -216,9 +210,8 @@
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <span class="badge bg-warning text-dark mb-2">開催まで 15日</span>
-                                <h4 class="fw-bold mb-2">SUMMER MUSIC FESTIVAL 2024</h4>
-                                <p class="mb-1"><i class="bi bi-calendar-event"></i> 2024年12月3日（火） 16:00 開演</p>
-                                <p class="mb-0"><i class="bi bi-geo-alt-fill"></i> 東京ビッグサイト</p>
+                                <h4 class="fw-bold mb-2">ラグザス 侍ジャパンシリーズ2026 名古屋　侍ジャパン 対 中日ドラゴンズ</h4>
+                                <p class="mb-1"><i class="bi bi-calendar-event"></i> 2026年2月27日（金） 19:00 開始</p>
                             </div>
                             <div class="col-md-4 text-md-end">
                                 <div class="qr-code">
@@ -232,7 +225,7 @@
                             <div class="col-md-6 mb-3">
                                 <h6 class="text-muted mb-2">チケット情報</h6>
                                 <p class="mb-1"><strong>チケットタイプ:</strong> 一般チケット</p>
-                                <p class="mb-1"><strong>座席:</strong> エリアA - A3</p>
+                                <p class="mb-1"><strong>座席:</strong> 1塁側 - FAブロック - 2列 - 10</p>
                                 <p class="mb-1"><strong>チケット番号:</strong> #TK-2024-001234</p>
                                 <p class="mb-0"><strong>購入日:</strong> 2024年11月1日</p>
                             </div>
@@ -250,8 +243,9 @@
                             <button class="btn btn-outline-primary">
                                 <i class="bi bi-download"></i> チケットをダウンロード
                             </button>
-                            <button class="btn btn-outline-secondary">
+                            <button class="btn btn-outline-secondary position-relative">
                                 <i class="bi bi-info-circle"></i> イベント詳細
+                                <a href="#" class="stretched-link"></a>
                             </button>
                         </div>
                     </div>
@@ -262,10 +256,9 @@
                     <div class="ticket-header">
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <span class="badge bg-warning text-dark mb-2">開催まで 22日</span>
-                                <h4 class="fw-bold mb-2">ROCK NIGHT JAPAN</h4>
-                                <p class="mb-1"><i class="bi bi-calendar-event"></i> 2024年12月10日（火） 19:00 開演</p>
-                                <p class="mb-0"><i class="bi bi-geo-alt-fill"></i> 大阪城ホール</p>
+                                <span class="badge bg-warning text-dark mb-2">開催まで 16日</span>
+                                <h4 class="fw-bold mb-2">ラグザス 侍ジャパンシリーズ2026 名古屋　侍ジャパン 対 中日ドラゴンズ</h4>
+                                <p class="mb-1"><i class="bi bi-calendar-event"></i> 2026年2月28日（土） 19:00 開始</p>
                             </div>
                             <div class="col-md-4 text-md-end">
                                 <div class="qr-code">
@@ -278,8 +271,8 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <h6 class="text-muted mb-2">チケット情報</h6>
-                                <p class="mb-1"><strong>チケットタイプ:</strong> VIPチケット</p>
-                                <p class="mb-1"><strong>座席:</strong> VIPエリア - V12</p>
+                                <p class="mb-1"><strong>チケットタイプ:</strong> ペアチケット</p>
+                                <p class="mb-1"><strong>座席:</strong> 中央 - 2列 - 2,3</p>
                                 <p class="mb-1"><strong>チケット番号:</strong> #TK-2024-001567</p>
                                 <p class="mb-0"><strong>購入日:</strong> 2024年10月28日</p>
                             </div>
@@ -297,59 +290,15 @@
                             <button class="btn btn-outline-primary">
                                 <i class="bi bi-download"></i> チケットをダウンロード
                             </button>
-                            <button class="btn btn-outline-secondary">
+                            <button class="btn btn-outline-secondary position-relative">
                                 <i class="bi bi-info-circle"></i> イベント詳細
+                                <a href="#" class="stretched-link"></a>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- チケットカード3 -->
-                <div class="ticket-card">
-                    <div class="ticket-header">
-                        <div class="row align-items-center">
-                            <div class="col-md-8">
-                                <span class="badge bg-info mb-2">開催まで 37日</span>
-                                <h4 class="fw-bold mb-2">WINTER ROCK FESTIVAL</h4>
-                                <p class="mb-1"><i class="bi bi-calendar-event"></i> 2024年12月25日（水） 18:00 開演</p>
-                                <p class="mb-0"><i class="bi bi-geo-alt-fill"></i> 横浜アリーナ</p>
-                            </div>
-                            <div class="col-md-4 text-md-end">
-                                <div class="qr-code">
-                                    <i class="bi bi-qr-code text-dark"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body p-4">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <h6 class="text-muted mb-2">チケット情報</h6>
-                                <p class="mb-1"><strong>チケットタイプ:</strong> ペアチケット</p>
-                                <p class="mb-1"><strong>座席:</strong> エリアB - D5, D6</p>
-                                <p class="mb-1"><strong>チケット番号:</strong> #TK-2024-001890</p>
-                                <p class="mb-0"><strong>購入日:</strong> 2024年11月5日</p>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <h6 class="text-muted mb-2">料金</h6>
-                                <p class="mb-1">チケット代: ¥12,000</p>
-                                <p class="mb-1">システム手数料: ¥1,200</p>
-                                <p class="mb-0"><strong>合計: ¥13,200</strong></p>
-                            </div>
-                        </div>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn btn-primary">
-                                <i class="bi bi-qr-code"></i> QRコードを表示
-                            </button>
-                            <button class="btn btn-outline-primary">
-                                <i class="bi bi-download"></i> チケットをダウンロード
-                            </button>
-                            <button class="btn btn-outline-secondary">
-                                <i class="bi bi-info-circle"></i> イベント詳細
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <!-- 参加履歴タブ -->
@@ -362,7 +311,7 @@
                                 <tr>
                                     <th>イベント名</th>
                                     <th>開催日</th>
-                                    <th>会場</th>
+                                    <th>金額</th>
                                     <th>チケットタイプ</th>
                                     <th>ステータス</th>
                                     <th>評価</th>
@@ -371,10 +320,10 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <strong>AUTUMN MUSIC FEST 2024</strong>
+                                        <strong>中日ドラゴンズ ファンフェスタ2025</strong>
                                     </td>
-                                    <td>2024年11月10日</td>
-                                    <td>幕張メッセ</td>
+                                    <td>2025年11月22日</td>
+                                    <td>¥8,800</td>
                                     <td>一般チケット</td>
                                     <td><span class="badge bg-success status-badge">参加済み</span></td>
                                     <td>
@@ -389,11 +338,11 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>JAZZ NIGHT TOKYO</strong>
+                                        <strong>高校野球女子選抜 vs イチロー選抜 KOBE CHIBEN</strong>
                                     </td>
-                                    <td>2024年10月25日</td>
-                                    <td>ブルーノート東京</td>
-                                    <td>VIPチケット</td>
+                                    <td>2025年8月31日</td>
+                                    <td>¥8,800</td>
+                                    <td>ペアチケット</td>
                                     <td><span class="badge bg-success status-badge">参加済み</span></td>
                                     <td>
                                         <div class="text-warning">
@@ -407,10 +356,10 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>URBAN BEATS FESTIVAL</strong>
+                                        <strong>ウエスタン・リーグ 中日vs阪神</strong>
                                     </td>
-                                    <td>2024年10月5日</td>
-                                    <td>Zepp Tokyo</td>
+                                    <td>2025年8月28日</td>
+                                    <td>¥8,800</td>
                                     <td>一般チケット</td>
                                     <td><span class="badge bg-success status-badge">参加済み</span></td>
                                     <td>
@@ -425,10 +374,10 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>ELECTRO WAVE 2024</strong>
+                                        <strong>ウエスタン・リーグ 中日vs阪神</strong>
                                     </td>
-                                    <td>2024年9月20日</td>
-                                    <td>東京ドーム</td>
+                                    <td>2025年8月27日</td>
+                                    <td>¥8,800</td>
                                     <td>ペアチケット</td>
                                     <td><span class="badge bg-success status-badge">参加済み</span></td>
                                     <td>
@@ -443,11 +392,11 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>SUMMER SONIC 2024</strong>
+                                        <strong>ウエスタン・リーグ 中日vs阪神</strong>
                                     </td>
-                                    <td>2024年8月15日</td>
-                                    <td>ZOZOマリンスタジアム</td>
-                                    <td>VIPチケット</td>
+                                    <td>2025年7月31日</td>
+                                    <td>¥8,800</td>
+                                    <td>一般チケット</td>
                                     <td><span class="badge bg-success status-badge">参加済み</span></td>
                                     <td>
                                         <div class="text-warning">
@@ -490,7 +439,7 @@
                                 <tr>
                                     <th>イベント名</th>
                                     <th>開催日</th>
-                                    <th>会場</th>
+                                    <th>購入日</th>
                                     <th>キャンセル日</th>
                                     <th>返金額</th>
                                     <th>ステータス</th>
@@ -499,21 +448,21 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <strong>SPRING MUSIC FESTIVAL</strong>
+                                        <strong>東海ろうきんナイター 中日vs巨人</strong>
                                     </td>
-                                    <td>2024年5月12日</td>
-                                    <td>さいたまスーパーアリーナ</td>
-                                    <td>2024年4月20日</td>
+                                    <td>2025年7月29日</td>
+                                    <td>2025年7月10日</td>
+                                    <td>2025年7月20日</td>
                                     <td>¥7,200</td>
                                     <td><span class="badge bg-danger status-badge">キャンセル済み</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>ROCK LEGENDS 2024</strong>
+                                        <strong>一生涯のパートナー第一生命スペシャルデー 中日vs広島</strong>
                                     </td>
-                                    <td>2024年7月8日</td>
-                                    <td>横浜アリーナ</td>
-                                    <td>2024年6月15日</td>
+                                    <td>2025年7月13日</td>
+                                    <td>2025年6月30日</td>
+                                    <td>2025年7月10日</td>
                                     <td>¥8,100</td>
                                     <td><span class="badge bg-danger status-badge">キャンセル済み</span></td>
                                 </tr>
@@ -530,40 +479,49 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-music-note-beamed"></i> LiveHub</h5>
-                    <p class="text-light">音楽で繋がる、最高の体験をあなたに。</p>
+                    <h5 class="fw-bold mb-3"><img class="icon" src="img/dome-icon.png" alt="ドームアイコン"> バンテリンドームナゴヤ</h5>
+                    <p class="text-light">ナゴヤを盛り上げる、興奮のランドマーク</p>
                 </div>
-                <div class="col-md-2 mb-3">
-                    <h6 class="fw-bold mb-3">サイト情報</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-light text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">利用規約</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">プライバシー</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h6 class="fw-bold mb-3">サポート</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-light text-decoration-none">ヘルプ</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">お問い合わせ</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h6 class="fw-bold mb-3">フォローする</h6>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-spotify fs-4"></i></a>
+                <div class="row d-flex">
+
+                    <div class="col-6 mb-3">
+                        <h6 class="fw-bold mb-3">サイト情報</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="nagodo-dome-about.html" class="text-light text-decoration-none">About</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">利用規約</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">プライバシー</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <h6 class="fw-bold mb-3">サポート</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">ヘルプ</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">お問い合わせ</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h6 class="fw-bold mb-3">フォローする</h6>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-spotify fs-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" mb-3 justify-content-end d-flex">
+                    <a href="#" class="btn  btn-outline-light ">TOPに戻る</a>
+
+                </div>
+                <hr class="border-light">
+                <p class="text-center text-light mb-0">&copy; 2024 LiveHub. All rights reserved.</p>
             </div>
-            <hr class="border-light">
-            <p class="text-center text-light mb-0">&copy; 2024 LiveHub. All rights reserved.</p>
-        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規登録 - バンテリンドームナゴヤ</title>
+    <!-- ファビコンつける -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="icon" href="img/dome-icon.png">
+
+    <style>
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #ec4899;
+            --dark-bg: #18181b;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 50%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: scroll;
+        }
+        
+        /* いらなさそう */
+        /* body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.3), transparent);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+         */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(30px, 30px);
+            }
+        }
+
+        .login-container {
+            max-width: 450px;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .login-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .login-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+        }
+
+        .login-body {
+            padding: 40px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.25);
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            color: white;
+            padding: 14px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+        }
+
+        .social-login-btn {
+            border: 2px solid #e5e7eb;
+            padding: 14px;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+
+        .social-login-btn:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(139, 92, 246, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .divider span {
+            padding: 0 20px;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+            color: white;
+        }
+
+        .input-group-text {
+            background: transparent;
+            border-right: none;
+        }
+
+        .form-control {
+            border-left: none;
+        }
+        .icon {
+            width: 40px;
+            height: auto;
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- スクロールできない -->
+    <!-- 戻るリンク -->
+    <a href="index.html" class="back-link d-none d-md-block">
+        <i class="bi bi-arrow-left-circle"></i> ホームに戻る
+    </a>
+
+    <div class="login-container">
+        <a href="index.html" class="back-link d-md-none position-static">
+            <i class="bi bi-arrow-left-circle"></i> ホームに戻る
+        </a>
+        <div class="login-card">
+            <!-- ログインヘッダー -->
+            <div class="login-header">
+                <div class="login-icon">
+                    <img class="icon" src="img/dome-icon.png" alt="ドームアイコン">
+                </div>
+                <h2 class="fw-bold mb-2">バンテリンドームナゴヤ</h2>
+                <p class="mb-0">ナゴヤを盛り上げる、興奮のランドマーク</p>
+            </div>
+
+            <!-- ログインフォーム -->
+            <div class="login-body">
+                <form id="loginForm">
+                    <!-- メールアドレス -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold">
+                            メールアドレス
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <input type="email" class="form-control form-control-lg" id="email"
+                                placeholder="example@email.com" required>
+                        </div>
+                    </div>
+
+                    <!-- パスワード -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label fw-bold">
+                            パスワード
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <input type="password" class="form-control form-control-lg" id="password"
+                                placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <!-- オプション -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="remember">
+                            <label class="form-check-label" for="remember">
+                                利用規約に同意
+                            </label>
+                        </div>
+                        <a href="#" class="text-decoration-none small fw-bold" style="color: var(--primary-color);">
+                            利用規約
+                        </a>
+                    </div>
+
+                    <!-- 新規登録ボタン -->
+                    <button type="submit" class="btn btn-login w-100 mb-3">
+                        <i class="bi bi-box-arrow-in-right"></i> 新規登録
+                    </button>
+
+
+                </form>
+
+
+                <!-- ログインリンク -->
+                <div class="text-center">
+                    <p class="text-muted mb-0">
+                        ログインページへ戻る
+                        <a href="nagodo-login-page.html" class="text-decoration-none fw-bold" style="color: var(--primary-color);">ログイン</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 追加情報 -->
+        <div class="text-center mt-4 text-white">
+            <p class="mb-2">
+                <a href="#" class="text-white text-decoration-none">利用規約</a> ・
+                <a href="#" class="text-white text-decoration-none">プライバシーポリシー</a>
+            </p>
+            <p class="small">&copy; 2024 LiveHub. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+
+</html>
