@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オープン戦　中日vsDeNA - バンテリンドームナゴヤ</title>
+    <!-- ファビコンつける -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="icon" href="img/dome-icon.png">
+
+    <style>
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+
+        .timetable-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .time-slot {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .ticket-cta {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        /* .carousel-item {
+            aspect-ratio: 16 / 9;
+        } */
+
+        img {
+            max-width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img class="icon" src="img/dome-icon.png" alt=""> バンテリンドームナゴヤ
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nagodo-festival-list.html">イベント一覧</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nagodo-baseball-list.html">野球情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nagodo-baseball-ticket.html">ドラゴンズ観戦チケット</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nagodo-festival-myticket.html">マイチケット</a>
+                    </li>
+                </ul>
+                <a href="nagodo-login-page.html" class="btn btn-light ms-3 fw-bold">
+                    <i class="bi bi-person-circle"></i> ログイン
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">ドーム概要</h1>
+            <div class="row mt-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+
+        <!-- イメージカルーセル -->
+        <!-- mb-5でインジケーターの位置を調整 -->
+        <div id="eventCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/nagodo1.jpg" class="d-block img-fluid w-100 h-100" alt="メインイラスト">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/nagodo2.jpg" class="d-block img-fluid w-100 h-100" alt="過去の様子1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/nagodo3.jpg" class="d-block img-fluid w-100 h-100" alt="過去の様子2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/nagodo4.jpg" class="d-block img-fluid w-100 h-100" alt="会場の雰囲気">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">前へ</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">次へ</span>
+            </button>
+        </div>
+
+
+
+
+        <!-- メインコンテンツ -->
+
+        <!-- ドーム概要 -->
+        <div class="info-card mb-4">
+            <h3 class="fw-bold mb-3"><i class="bi bi-info-circle-fill text-primary"></i> ドーム概要</h3>
+            <div>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th class="table-warning" width=20%>敷地面積</th>
+                            <td>104,447㎡　（31,596坪）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>建築面積</th>
+                            <td>48,169㎡　（14,571坪）<br>※「バンテリンドーム ナゴヤ●個分」と表現する場合の面積</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>延床面積</th>
+                            <td>119,445㎡　（36,132坪）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>階数</th>
+                            <td>地上6階　（一部中2階）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>高さ</th>
+                            <td>地上66.9m 　（天井高64.3m）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>直径</th>
+                            <td> 183.6m　（屋根ラチス部分）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>アリーナ容積</th>
+                            <td>1,700,000㎥（フィールド＋スタンド）<br>※「バンテリンドーム ナゴヤ●個分」と表現する場合の容積（体積）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>フィールド面積</th>
+                            <td>13,200㎡　（※2015年までは13,400㎡）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>寸法</th>
+                            <td>両翼（野球時） 100m<br>中堅（野球時） 122m<br>外野フェンス高 4.8m</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>客席数</th>
+                            <td>36,412席（2025年プロ野球時）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>収容人数</th>
+                            <td>48,819人（2025年時点、アリーナ使用時最大）</td>
+                        </tr>
+                        <tr>
+                            <th class="table-warning" width=20%>オープン</th>
+                            <td>1997年（平成9年）3月12日</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold mb-3"><img class="icon" src="img/dome-icon.png" alt="ドームアイコン"> バンテリンドームナゴヤ</h5>
+                    <p class="text-light">ナゴヤを盛り上げる、興奮のランドマーク</p>
+                </div>
+                <div class="row d-flex">
+
+                    <div class="col-6 mb-3">
+                        <h6 class="fw-bold mb-3">サイト情報</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">About</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">利用規約</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">プライバシー</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <h6 class="fw-bold mb-3">サポート</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">ヘルプ</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">お問い合わせ</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h6 class="fw-bold mb-3">フォローする</h6>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-spotify fs-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" mb-3 justify-content-end d-flex">
+                    <a href="#" class="btn  btn-outline-light ">TOPに戻る</a>
+
+                </div>
+                <hr class="border-light">
+                <p class="text-center text-light mb-0">&copy; 2024 LiveHub. All rights reserved.</p>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

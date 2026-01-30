@@ -11,6 +11,12 @@ body {
     background-color: #fafafa;
 }
 
+.icon {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
 .navbar {
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 100%);
 }
