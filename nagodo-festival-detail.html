@@ -22,10 +22,10 @@
             background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 50%, var(--secondary-color) 100%);
             color: white;
             padding: 40px;
-            border-radius: 20px;
-            margin-top: -100px;
+            border-radius: 0 0 20px 20px;
+            margin-top: -70px;
             position: relative;
-            z-index: 1;
+            z-index: 0;
         }
 
         .info-card {
@@ -46,7 +46,7 @@
             transition: transform 0.3s ease;
             cursor: pointer;
             border: none;
-            border-radius: 15px;
+            border-radius:  15px;
             overflow: hidden;
         }
 
@@ -151,7 +151,7 @@
         </nav>
 
         <!-- イメージカルーセル -->
-        <div id="eventCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div id="eventCarousel" class="carousel slide mb-5 z-1" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1"></button>
